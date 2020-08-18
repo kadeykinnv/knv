@@ -1,0 +1,11 @@
+technology:
+--Spring Boot
+--Data Jpa
+--postgresql
+MVC схема
+model: представлены сущности Продукт и статьи, а так же взаимосвязь с БД
+service: Бизнес логика, CRUD-Методы из JpaRepository
+Представлены не все возможные методы сортировки, и управления т.к их множество
+rest: Описаны Эндпойты и Ссылки
+RestApiProjectApplication - main-Method
+

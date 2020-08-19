@@ -13,9 +13,7 @@ public class Article  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "article_id")
     private Long articleId;
-    @Column(name = "product_id")
     @ManyToOne(optional=false, cascade=CascadeType.ALL)
-    @JoinColumn (name="product_id")
     private Product product;
     @Column(name = "article_name")
     private String articleName;

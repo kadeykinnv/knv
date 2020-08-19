@@ -17,20 +17,25 @@ public class ArticleController {
     public List<Article> findAllArticles() {
         return articleService.findAll();
     }
+
     @GetMapping("/articleById")
     public Article findArticleById(@PathVariable Long id) {
         return articleService.findById(id);
     }
+
     @PostMapping("/createArticle")
     public Article saveArticle(@RequestBody Article article) {
         return articleService.saveArticle(article);
     }
-    @DeleteMapping("/delete/{id}")
+
+    @RequestMapping(path = "/deleteArticle/{id}")
     public void deleteArticle(@PathVariable Long id) {
         articleService.deleteArticle(id);
     }
-    @PostMapping("/updateArticle")
+
+    @RequestMapping(path = "/updateArticle", method = RequestMethod.PUT)
     public Article updateArticle(@RequestBody Article article) {return articleService.updateArticle(article); }
+
     @GetMapping("/sortByArticleName")
     public List<Article> sortByArticleName() {
         return articleService.sortByArticleName();

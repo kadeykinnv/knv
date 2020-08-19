@@ -1,10 +1,7 @@
 package com.knv.restApiProject.service;
-
-import com.knv.restApiProject.model.Article;
 import com.knv.restApiProject.model.Product;
 import com.knv.restApiProject.repository.ProductRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.Comparator;
 import java.util.List;
 @Service

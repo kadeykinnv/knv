@@ -1,6 +1,5 @@
 package com.knv.restApiProject.model;
 
-
 import javax.persistence.*;
 import java.util.List;
 

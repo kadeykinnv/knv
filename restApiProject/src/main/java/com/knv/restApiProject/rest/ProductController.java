@@ -1,10 +1,7 @@
 package com.knv.restApiProject.rest;
-
-import com.knv.restApiProject.model.Article;
 import com.knv.restApiProject.model.Product;
 import com.knv.restApiProject.service.ProductService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -31,12 +28,12 @@ public class ProductController {
         return productService.saveProduct(product);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @RequestMapping(path = "/deleteProduct/{id}")
     public void deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
     }
 
-    @PostMapping("/updateProduct")
+    @RequestMapping(path = "/updateProduct", method = RequestMethod.PUT)
     public Product updateProduct(@RequestBody Product product) {
         return productService.updateProduct(product);
     }
